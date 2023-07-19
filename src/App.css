@@ -1,38 +1,208 @@
+@font-face {
+  font-family: 'B-NAZANIN';
+  src: local('B-NAZANIN'), url(./fonts/B-NAZANIN.TTF) format('truetype');
+}
+.repustate {
+  font-family: B-NAZANIN;
+  direction:rtl;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header{
+  overflow-x: hidden;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.select:focus {
+  outline: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon{
+  position: relative;
+  top:-3px;
+  right:29px;
 }
-
-.App-link {
-  color: #61dafb;
+.list{
+  font-size: large;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.list:hover{
+ color: #ff9f43;
+border-bottom: 1px solid #ff9f43;
+padding-bottom: 7px;
+}
+.project{
+  position: relative;
+  top:27px;
+  left:570px !important;
+}
+.scroll{
+  height: 170px;
+  overflow-y: scroll;
+  width: 230px;
+}
+.apply{
+  position: relative;
+  right: 610px;
+}
+.filters{
+  position: relative;
+  bottom: 2px;
+  left:7px;
+}
+.searching{
+  position: relative;
+  top: 6px;
+  left:1px;
+}
+.question{
+  position: relative;
+  top: 6px;
+  left:8px;
+  transform: scale(-1,1);
+}
+.part2{
+  overflow: hidden;
+}
+.svgPart2{
+  color: #7367f0;
+  position: relative;
+  top: 5px;
+  left:75px;
+}
+.textPart2{
+  position: relative;
+  top: 5px;
+  right:70px;
+  font-weight: bolder;
+}
+.text2Part2{
+  position: relative;
+  top: 5px;
+  right:30px;
+}
+.drop{
+  position: relative;
+  top: 6px;
+  right:190px;
+}
+.lan{
+  padding-right: 11px;
+  padding-left: 10px;
+}
+.bar{
+  transform: rotate(90deg); 
+  position: relative;
+  top: 90px;
+  height: 140px;
+  width: 290px;
+}
+.d{
+  position:relative;
+  right:100px;
+  top: 1px;
+}
+.calendar{
+  position:relative;
+  left:57px;
+  top: 1px;
+}
+.mainSignin{
+  height: 753px;
+  width: 100%;
+  background-image: url("background.png");
+  background-size: cover;
+}
+.logosign{
+  width: 200px;
+  margin-top: 175px;
+  margin-bottom: 20px;
+}
+.signinInput{
+  width: 300px;
+  height: 48px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-color: white;
+}
+.signinButton{
+  background-color: #2fffa5;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 300px;
+  height: 40px;
+  border-radius: 25px;
+  border-color: #2fffa5;
+}
+.signinInput:focus{
+  outline: none;
+}
+.mainLogin{
+  background-image: url("background.png");
+}
+.loginButton{
+  background-color: #2fffa5;
+  width: 300px;
+  height: 50px;
+  border-color: #2fffa5;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
+.headLoginL{
+  position: relative;
+  top:-10px;
+  right: 265px;
+  width: 199px;
+  margin-bottom: 40px;
+} 
+.pLogin{
+  margin-bottom: 72px;
+}
+.headLoginR{
+  position: relative;
+  top:24px;
+  left: 309px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+  color: whitesmoke;
+}
+.headLoginR:hover{
+ color: white;
+}
+.logo{
+  width: 180px;
+  height: 52px;
+}
+.home{
+  background-image: url("https://www.repustate.com/static/images/svgs/semantic-search-img.svg");
+  background-repeat: no-repeat;
+}
+.homeMain{
+  margin-left: 670px;
+  padding-top: 99px;
+  padding-bottom: 160px;
+}
+.logout{
+  height: 40px;
+  margin-top: 50px;
+  font-weight: 600;
+  background-color: rgb(254, 230, 110);
+  border-color:rgb(232, 208, 89);
+}
+.delete{
+  height: 40px;
+  margin-top: 50px;
+  margin-right: 50px;
+  background-color: rgb(254, 230, 110);
+  border-color:rgb(232, 208, 89);
+  font-weight: 600;
+}
+.logoHome{
+ width: 300px;
+ height: 120px;
+ position: relative;
+ top: -34px;
+ left: 500px;
+}
+.container{
+  padding-top: 60px;
+  background-color: #f2f6fad4;
 }
