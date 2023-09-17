@@ -139,7 +139,7 @@ padding-bottom: 7px;
 }
 .loginButton{
   background-color: #2fffa5;
-  width: 300px;
+  width: 560px;
   height: 50px;
   border-color: #2fffa5;
   margin-top: 10px;
@@ -180,29 +180,36 @@ padding-bottom: 7px;
   padding-top: 99px;
   padding-bottom: 160px;
 }
-.logout{
+.bHome{
   height: 40px;
   margin-top: 50px;
-  font-weight: 600;
+  font-weight: bold;
+  font-size: large;
   background-color: rgb(254, 230, 110);
   border-color:rgb(232, 208, 89);
-}
-.delete{
-  height: 40px;
-  margin-top: 50px;
-  margin-right: 50px;
-  background-color: rgb(254, 230, 110);
-  border-color:rgb(232, 208, 89);
-  font-weight: 600;
+  padding: 10px 50px 40px 50px;
+  margin: 10px;
 }
 .logoHome{
- width: 300px;
- height: 120px;
+ width: 250px;
+ height: 100px;
  position: relative;
  top: -34px;
  left: 500px;
+ margin-bottom: 107px;
 }
 .container{
   padding-top: 60px;
   background-color: #f2f6fad4;
+}
+.form{
+  width: 760px;
+}
+.link{
+  text-decoration: none;
+  color: black;
+}
+.link:hover{
+  text-decoration: none;
+  color: black;
 }

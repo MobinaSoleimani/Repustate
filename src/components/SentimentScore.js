@@ -13,7 +13,7 @@ import { Bar } from "react-chartjs-2";
 const SentimentScore = () => {
 
     return (
-        <div className='h-50 w-50'>
+        <div>
         </div>
     );
 };

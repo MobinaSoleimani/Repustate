@@ -23,11 +23,11 @@ function Home(){
     return(
          <div className="container repustate">
          <div className="home">
-            <img className='logoHome' src={logo} alt='logo' />
+            <div><img className='logoHome' src={logo} alt='logo' /></div>
+           <h1 className="mt-4  w-50">تجزیه و تحلیل احساسات   مشتریان و کارمندان از نظرسنجی‌ها و رسانه‌های اجتماعی  </h1>
          <div className="homeMain">
-            <h4 className="mt-5 mb-5 fw-bolder">  {localStorage.getItem('name')}  کاربر گرامی خوش آمدید.</h4>
-            <div><Link to='/*'><button className="mt-5 fw-bolder px-5 py-2 btn btn-outline-primary">ورود به نسخه ی نمایشی</button></Link></div>
-            <button onClick={logout} className="logout px-4">ثبت نام کردید؟</button>
+            <Link to='/Signup'><button className="bHome">ثبت نام </button></Link>
+            <Link to='/Signin'><button className="bHome">ورود </button></Link>
             <button onClick={deleteAccount} className="delete px-3">خروج از حساب کاربری</button>
         </div>
         </div>

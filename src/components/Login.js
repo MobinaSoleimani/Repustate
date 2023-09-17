@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Home from './Home';
+import RepustateMain from './RepustateMain';
 import {Link} from 'react-router-dom';
 import { validate } from './Validate';
 import '../App.css';
@@ -19,9 +19,7 @@ function Login(){
    const [show,setShow]=useState(false)
     const localSignUp=localStorage.getItem("signUp")
     const localEmail=localStorage.getItem("email")
-    const localPassword=localStorage.getItem("password")
-    const localName=localStorage.getItem("name")
-     
+    const localPassword=localStorage.getItem("password")     
   
     const [data,setData]=useState({
         email:"",
@@ -55,6 +53,7 @@ function Login(){
         const submitHandler =(event)=>{
         event.preventDefault();
         if(!Object.keys(errors).length){
+        console.log(data)
         }
         else{
               setTouched({
@@ -73,47 +72,20 @@ function Login(){
            localStorage.setItem("email",email.current.value)
            localStorage.setItem("password",password.current.value)
            localStorage.setItem("signUp",email.current.value)
-          //  alert("Account created successfully!!")
-           window.location.reload()
          }
-
-      }
-   
-      const handleSignIn=()=>{
-       if(email.current.value==localEmail&&password.current.value==localPassword){
-           localStorage.setItem("signUp",email.current.value)
-           window.location.reload()
-       }
       }
    return(
     <div>
-        {showHome?<Home/>:
-        (show?
-          
-             <div className='mainSignin repustate'>
-            <form onSubmit={submitHandler}> 
-            <div className='d-flex justify-content-center flex-column align-items-center p-5'>
-            <img className='logosign' src={logosign} alt='logosign' />
-            <h6 className="text-white">کاربر گرامی  {localName}  لطفا  </h6>
-            <h6 className="text-white"> ایمیل و رمزعبور خود را وارد کنید</h6>
-            <input className='signinInput rounded' type="Email" ref={email} name="email" value={data.email}  onChange={changeHandler} onFocus={focusHandler} placeholder=" ایمیل"/>
-            {errors.email&& touched.email && <span className='text-warning'>{errors.email}</span>}
-            <input className='signinInput rounded' ref={password} type="password" name="password"  value={data.password} onChange={changeHandler} onFocus={focusHandler} placeholder="  رمز عبور"></input>
-            {errors.password&& touched.password && <span className='text-warning'>{errors.password}</span>}
-            <button type='submit' onClick={handleSignIn} className="signinButton">ورود</button>
-            <Link className="text-white text-decoration-none py-3" to='/Signup'>ثبت نام نکردید؟</Link>
-            </div>
-            </form>
-        </div>       
-            :
-            <div className='row w-100 repustate'>                   
-              <div className='col-6 mt-5'>
+        {showHome?<RepustateMain/>:
+        (
+            <div className=' w-100 repustate d-flex'>  
+             <div className='w-50 mt-5 '>
              <h3 className='p-5 fw-bold'> آیا می دانستید که می توانید در هر زبانی با استفاده از هوش مصنوعی، قوانین احساسات سفارشی ایجاد کنید؟</h3>
              <img src='https://www.repustate.com/static/images/svgs/regirst-bg.svg'/>
-             </div>
- 
-            <div className='col-6 mainLogin text-white d-flex justify-content-center flex-column align-items-center' onSubmit={submitHandler}>
-             <Link to='/Signin' className='headLoginR'>بازگشت<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+             </div>                 
+             <form > 
+            <div className='form mainLogin text-white d-flex justify-content-center flex-column align-items-center' >
+             <Link to='/Home' className='headLoginR'>بازگشت<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
              <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
              </svg></Link>       
              <img className='px-3 headLoginL' src={logosign}/>
@@ -130,9 +102,10 @@ function Login(){
              <input className='signinInput w-75 rounded' type="password" name="confirmPassword" value={data.confirmPassword} onChange={changeHandler} onFocus={focusHandler} placeholder="  تایید رمز عبور"/>
              {errors.confirmPassword && touched.confirmPassword && <span className='text-warning'>{errors.confirmPassword}</span>}
            
-             <button type='submit' onClick={handleClick} className="loginButton w-75 rounded">ثبت نام</button>
+             <Link className="link" to='/*'><button type='submit' onClick={handleClick} className="loginButton rounded"> <Link className="link" to='/*'>ثبت نام </Link></button></Link>
              <p className='mt-2 pLogin'> کلیه حقوق شرکت رایاصدر محفوظ است.</p>
              </div>
+             </form>
             </div>)
         }
     </div>
