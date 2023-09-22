@@ -28,7 +28,7 @@ function Home(){
          <div className="homeMain">
             <Link to='/Signup'><button className="bHome">ثبت نام </button></Link>
             <Link to='/Signin'><button className="bHome">ورود </button></Link>
-            <button onClick={deleteAccount} className="delete px-3">خروج از حساب کاربری</button>
+            {/* <button onClick={deleteAccount} className="delete px-3">خروج از حساب کاربری</button> */}
         </div>
         </div>
         </div>

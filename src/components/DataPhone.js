@@ -753,5 +753,6 @@
               titleOfSource:'بارگذاری',
               titleOfAspect1:' حافظه‌ی رم',
               titleOfAspect2:'ابعاد',
-            },
+            } ,
+ 
   ];
