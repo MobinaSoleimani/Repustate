@@ -51,7 +51,7 @@ const polarities=data.map(i => (i.polarity));
   }
 
   const p=[neutral,positive,negative];
-
+console.log(p);
   const [userYear, setUserYear] = useState({
     labels:['خنثی','مثبت','منفی'],
     datasets: [
