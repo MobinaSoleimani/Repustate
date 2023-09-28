@@ -71,7 +71,7 @@ const polarities=data.map(i => (i.polarity));
         return (
         <div>
     <div style={{ width: 300,marginBottom:100 }}>
-    <Doughnut data={userYear}
+    {/* <Doughnut data={userYear}
      options={{
       plugins: {
         title: {
@@ -86,7 +86,7 @@ const polarities=data.map(i => (i.polarity));
       },
       responsive: true,
     }}
-    />
+    /> */}
   </div>
         </div>
         )}
